@@ -2,10 +2,14 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 const db = require('../seeder.js');
-const ENDPOINT = '/'
+const path = require('path');
+const ENDPOINT = '/';
+//var bodyParser = require('body-parser');
 
 
-app.use(express.static(__dirname + '/../public/dist'));
+
+
+app.use(express.static(path.join(__dirname, '../public/dist')));
 
 const testFunction = function(req, res, next) {
   console.log(`recived a: ${req.method} request to ${req.path}`);
@@ -14,7 +18,9 @@ const testFunction = function(req, res, next) {
 }
 
 app.use(testFunction);
+
 app.use(express.static(__dirname + '/../public/dist'));
+app.use(express.json());
 
 app.get(ENDPOINT, () => {
   //function for api query

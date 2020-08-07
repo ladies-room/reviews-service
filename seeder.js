@@ -35,9 +35,9 @@ let Review = mongoose.model('Review', reviewSchema);
 
 let fakeReviews = [];
 
-for (var i = 0; i < 150; i++) {
+for (var i = 0; i < 5000; i++) {
   let fakeReview = new Review({
-    location_id: faker.random.number({min:1, max:20}),
+    location_id: faker.random.number({min:1, max:100}),
     name: faker.name.firstName(),
     photo: faker.image.avatar(),
     date: faker.date.month(),
