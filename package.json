@@ -8,16 +8,23 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "seed": "node seeder.js"
+    "seed": "node seeder.js",
+    "react-dev": "webpack -d --watch"
   },
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.17.1",
     "faker": "^4.1.0",
-    "mongoose": "^5.9.27",
-    "webpack": "^4.44.1"
+    "mongoose": "^5.9.27"
+
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/cli": "^7.10.5",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^7.11.0",
+    "webpack": "^4.44.1"
   }
 }
