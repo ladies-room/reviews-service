@@ -61,6 +61,23 @@ Review.insertMany(fakeReviews)
   });
 
 
+  module.exports = {
+    getReviewsByLocation: function(id, callback) {
+
+      Review.find({ location_id: id }, (err, result) => {
+        if(err) {
+          callback(err);
+        } else {
+          callback(null, result)
+        }
+
+      })
+
+    }
+
+  }
+
+
 
 
 
