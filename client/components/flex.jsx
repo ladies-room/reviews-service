@@ -9,16 +9,6 @@ const Grid = styled.div`
   align-items: end;
 `;
 
-// const Wrapper = styled.div`
-
-//    display: flex;
-
-
-
-//   width: 500px;
-//   margin-left: 20px;
-// `;
-
 const Star = styled.span`
   font-size: 22px;
   color: rgb(255, 56, 92);;
@@ -52,14 +42,7 @@ display: grid;
 
 
 const Title = (props) => {
-  // const findAvg = (value) => {
-  //   Object.Values(props.)
-  // //     const numbers2 = props.reviews.map(review =>
-  // //       review.value
-  // //     );
-  // //     const avgs2 = avg(numbers2);
-  // //     return avgs2.toFixed(1);
-  //   }
+
 
   return (
 

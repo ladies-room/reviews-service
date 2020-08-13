@@ -3,16 +3,6 @@ import styled from 'styled-components';
 import avg from '../helpers/avg.js';
 
 
-const Wrapper = styled.div`
-  margin: 0 auto;
-  width: 500px;
-  height: 64px;
-  border: 1px dashed red;
-  font-size: 12px;
-  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
-  letter-spacing: normal;
-  align-items: center;
-`;
 
 const Grid = styled.div`
   width: 1000;
@@ -82,12 +72,10 @@ margin: 0 auto;
 const Ratings = (props) => {
 
   const findAvg = (item) => {
-    //console.log(item)
     const numbers2 = props.reviews.map(review =>
       review[item]
     );
     const avgs2 = avg(numbers2);
-    console.log(numbers2)
     return avgs2.toFixed(1);
 
   }
